@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!--<link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:wght@900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/c479b4325f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="src/index.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>World weather report</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="banner border p-2 mt-3">
+        <div class="row">
+          <div class="col-11">
+            <h1>World Weather Report</h1>
+          </div>
+
+          <div class="col-1">
+            <span class="degree-switch-symbols">
+              <a class="switchFarenheit" id="switchFarenheit" href="">°F</a>
+              <a class="swtichCentigrade" id="switchCentigrade" href="">°C</a>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="search-section">
+        <form id="search-form">
+          <div class="row">
+            <div class="col-7">
+              <input
+                type="text"
+                placeholder="Search for a place"
+                autocomplete="”off”"
+                autofocus="”on”"
+                size="60px"
+                class="search-field"
+                id="search-text-input"
+              />
+            </div>
+            <div class="col-4">
+              <input type="submit" value="Search" class="search-button" />
+            </div>
+            <div class="col-1">
+              <input
+                type="submit"
+                value="Local weather"
+                class="local-search-button"
+                id="local-search-button"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="current-section">
+        <h2>London current</h2>
+        <hr class="heading-hr" />
+        <div class="current-summary-top">
+          <div class="row">
+            <div class="col-4">
+              <div class="current-summary-icon">
+                <i class="fas fa-wind"></i>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="current-summary-place" id="current-summary-place">
+                London
+              </div>
+            </div>
+            <div class="col-4">
+              <span
+                class="currentTempNumber"
+                id="current-summary-temperature-number"
+                >8
+              </span>
+              <span
+                class="currentTempCent"
+                id="current-summary-temperature-default-centigrade"
+                >°C
+              </span>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="current-summary-middle">
+          <div class="current-summary-feels-label">Feels like: 6°C</div>
+          <div class="current-summary-description">Blustery conditions</div>
+          <div class="current-summary-date">Sunday 02/01/22 17:46 GMT</div>
+        </div>
+        <hr />
+        <div class="current-summary-bottom">
+          <div class="row">
+            <div class="col-4">
+              <div class="current-summary-precipitation">
+                Precipitation chance: 20%
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="current-summary-wind">Wind speed: 30mph</div>
+            </div>
+            <div class="col-4">
+              <div class="current-summary-humidity">Humidity level: 80%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="forecast-section">
+        <h3>London forecast</h3>
+        <hr class="heading-hr" />
+        <div class="row">
+          <div class="col-2">
+            <div class="forecast-today">
+              <p class="forecast-day">Today</p>
+              <p class="forecast-icon"><i class="fas fa-wind"></i></p>
+              <p class="forecast-high">High: 12°C</p>
+              <p class="forecast-low">Low: 1°C</p>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="forecast-day1">
+              <p class="forecast-day">Monday</p>
+              <p class="forecast-icon"><i class="fas fa-cloud-sun"></i></p>
+              <p class="forecast-high">High: 12°C</p>
+              <p class="forecast-low">Low: 1°C</p>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="forecast-day2">
+              <p class="forecast-day">Tuesday</p>
+              <p class="forecast-icon"><i class="fas fa-cloud"></i></p>
+              <p class="forecast-high">High: 12°C</p>
+              <p class="forecast-low">Low: 1°C</p>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="forecast-day3">
+              <p class="forecast-day">Wednesday</p>
+              <p class="forecast-icon">
+                <i class="fas fa-cloud-showers-heavy"></i>
+              </p>
+              <p class="forecast-high">High: 12°C</p>
+              <p class="forecast-low">Low: 1°C</p>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="forecast-day4">
+              <p class="forecast-day">Thursday</p>
+              <p class="forecast-icon"><i class="fas fa-snowflake"></i></p>
+              <p class="forecast-high">High: 12°C</p>
+              <p class="forecast-low">Low: 1°C</p>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="forecast-day5">
+              <p class="forecast-day">Friday</p>
+              <p class="forecast-icon"><i class="fas fa-snowflake"></i></p>
+              <p class="forecast-high">High: 12°C</p>
+              <p class="forecast-low">Low: 1°C</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>

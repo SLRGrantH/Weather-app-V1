@@ -1,0 +1,150 @@
+body {
+  background-image: linear-gradient(to bottom, #e3ecfffc, #8bb0fc);
+  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #e3ecff;
+}
+h1 {
+  display: inline;
+  font-weight: 400;
+  color: #f2f268;
+}
+h2,
+h3 {
+  font-weight: 400;
+  color: #f2f268;
+}
+.degree-switch-symbols {
+  font-weight: 700;
+  font-size: 30px;
+  color: #f2f268;
+}
+a:link {
+  color: #f2f268;
+}
+a:visited {
+  color: #f2f268;
+}
+.banner {
+  background-color: #8bb0fc;
+  width: 100%;
+  border-radius: 10px;
+  border: solid 3px;
+}
+.save-button {
+  position: relative;
+  right: -24px;
+  top: 10px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 400;
+  border-radius: 5px;
+  border-color: #ffff;
+  background: #8bb0fc;
+  color: #e3ecff;
+  border: solid;
+}
+.save-button:hover {
+  background: #ffff;
+}
+.search-section {
+  background-color: #8bb0fc;
+  margin: auto;
+  padding: 15px;
+  border-radius: 10px;
+  border-color: #8bb0fc;
+  border: solid 2px;
+}
+.search-field {
+  border-radius: 5px;
+  padding: 3px;
+  border-color: #e3ecff;
+  border: 1px solid #e3ecff;
+  color: #8bb0fc;
+  font-weight: 700;
+  outline: none;
+}
+input::placeholder {
+  color: #8bb0fc;
+}
+.search-button {
+  width: 108px;
+  position: relative;
+  right: 150px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 400;
+  font-weight: bolder;
+  border-radius: 5px;
+  padding: 3px;
+  border-color: #e3ecff;
+  background: #ffff;
+  color: #8bb0fc;
+  border: solid 1px;
+}
+.search-button:hover {
+  background: #f2f268;
+}
+.local-search-button {
+  width: 108px;
+  position: relative;
+  right: 35px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 400;
+  font-weight: bolder;
+  border-radius: 5px;
+  padding: 3px;
+  border-color: #e3ecff;
+  background: #f2f268;
+  color: #8bb0fc;
+  border: solid 1px;
+}
+.local-search-button:hover {
+  background: #f2f268;
+}
+
+.current-section {
+  background-color: #8bb0fc;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  border-color: #8bb0fc;
+  border: solid 2px;
+}
+.current-summary-top {
+  font-size: 40px;
+  font-weight: 700;
+  color: #ffff;
+}
+.current-summary-icon {
+  font-size: 50px;
+}
+.current-summary-middle {
+  font-size: 22px;
+}
+.current-summary-bottom {
+  font-size: 18px;
+}
+.forecast-section {
+  background-color: #8bb0fc;
+  margin: auto;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  border-color: #8bb0fc;
+  border: solid 2px;
+}
+.forecast-day {
+  font-weight: 700;
+}
+.forecast-icon {
+  font-size: 40px;
+  color: #ffff;
+}
+.forecast-high {
+  margin-bottom: 10px;
+}
+.forecast-low {
+  margin-top: -10px;
+}
+.heading-hr {
+  border: 1px solid #f2f268;
+}
