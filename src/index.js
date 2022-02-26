@@ -98,7 +98,19 @@ function showTemperature(response) {
     "#current-summary-temperature-number"
   );
   defaultCentigrade.innerHTML = Math.round(response.data.main.temp);
+  let currentSummaryDescription = document.querySelector(
+    ".current-summary-description"
+  );
+  currentSummaryDescription.innerHTML = response.data.description;
 }
+
+/*function showDescription(response) {
+  console.log(response);
+  let currentSummaryDescription = document.querySelector(
+    ".current-summary-description"
+  );
+  currentSummaryDescription.innerHTML = response.data.description;
+}*/
 
 let apiKey = "60ce786765a7bafce2c0d732bb827118";
 let units = "metric";
