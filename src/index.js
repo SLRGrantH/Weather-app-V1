@@ -109,6 +109,9 @@ function showTemperature(response) {
 
   let currentSummaryWind = document.querySelector("#current-summary-wind");
   currentSummaryWind.innerHTML = Math.round(response.data.wind.speed);
+
+  let currentSummaryFeels = document.querySelector("#current-summary-feels");
+  currentSummaryFeels.innerHTML = Math.round(response.data.main.feels_like);
 }
 
 /*function showDescription(response) {
