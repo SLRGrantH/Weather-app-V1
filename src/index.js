@@ -103,10 +103,12 @@ function showTemperature(response) {
   );
 
   weatherDescription = response.data.weather[0].description;
-  weatherDescription = weatherDescription.charAt(0).toUpperCase() + weatherDescription.slice(1);
+  weatherDescription =
+    weatherDescription.charAt(0).toUpperCase() + weatherDescription.slice(1);
   currentSummaryDescription.innerHTML = weatherDescription;
 
-  //currentSummaryDescription.innerHTML = response.data.weather[0].description;
+  let currentSummaryWind = document.querySelector("#current-summary-wind");
+  currentSummaryWind.innerHTML = Math.round(response.data.wind.speed);
 }
 
 /*function showDescription(response) {
