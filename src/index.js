@@ -101,7 +101,12 @@ function showTemperature(response) {
   let currentSummaryDescription = document.querySelector(
     "#current-summary-description"
   );
-  currentSummaryDescription.innerHTML = response.data.weather[0].description;
+
+  weatherDescription = response.data.weather[0].description;
+  weatherDescription = weatherDescription.charAt(0).toUpperCase() + weatherDescription.slice(1);
+  currentSummaryDescription.innerHTML = weatherDescription;
+
+  //currentSummaryDescription.innerHTML = response.data.weather[0].description;
 }
 
 /*function showDescription(response) {
