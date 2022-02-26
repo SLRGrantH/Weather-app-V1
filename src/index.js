@@ -112,6 +112,11 @@ function showTemperature(response) {
 
   let currentSummaryFeels = document.querySelector("#current-summary-feels");
   currentSummaryFeels.innerHTML = Math.round(response.data.main.feels_like);
+
+  let currentSummaryHumidity = document.querySelector(
+    "#current-summary-humidity"
+  );
+  currentSummaryHumidity.innerHTML = Math.round(response.data.main.humidity);
 }
 
 /*function showDescription(response) {
