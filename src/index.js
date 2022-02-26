@@ -99,7 +99,7 @@ function showTemperature(response) {
   );
   defaultCentigrade.innerHTML = Math.round(response.data.main.temp);
   let currentSummaryDescription = document.querySelector(
-    ".current-summary-description"
+    "#current-summary-description"
   );
   currentSummaryDescription.innerHTML = response.data.description;
 }
