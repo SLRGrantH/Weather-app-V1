@@ -117,6 +117,14 @@ function showTemperature(response) {
     "#current-summary-humidity"
   );
   currentSummaryHumidity.innerHTML = Math.round(response.data.main.humidity);
+  let currentIcon = document
+    .querySelector("#icon")
+    .setAttribute(
+      "src",
+      `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+  document.querySelector("#description").innerHTML =
+    response.data.weather[0].main;
 }
 
 /*function showDescription(response) {
