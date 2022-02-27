@@ -118,14 +118,23 @@ function showTemperature(response) {
   );
   currentSummaryHumidity.innerHTML = Math.round(response.data.main.humidity);
 
-  let currentIcon = document
+  /*let currentIcon = document
     .querySelector("#current-icon")
     .setAttribute(
       "src",
       `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
-  /*document.querySelector("#description").innerHTML =
-    response.data.weather[0].description;*/
+  //document.querySelector("#description").innerHTML =
+  //  response.data.weather[0].description;//
+  //currentIcon.setAttribute("alt", response.data.weather[0].description); */
+
+  let currentIcon = document.querySelector("#current-icon");
+  currentIcon.setAttribute(
+    "src",
+    "https://openweathermap.org/img/wn/" +
+      response.data.weather[0].icon +
+      "@2x.png"
+  );
   currentIcon.setAttribute("alt", response.data.weather[0].description);
 }
 
