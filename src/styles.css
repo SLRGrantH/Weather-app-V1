@@ -17,7 +17,7 @@ h3 {
 .degree-switch-symbols {
   font-weight: 700;
   font-size: 30px;
-  color: #f2f268;
+  color: #8bb0fc;
 }
 a:link {
   color: #f2f268;
@@ -147,4 +147,7 @@ input::placeholder {
 }
 .heading-hr {
   border: 1px solid #f2f268;
+}
+.degree-switch-symbols {
+  display: none;
 }
