@@ -131,9 +131,7 @@ function showTemperature(response) {
   let currentIcon = document.querySelector("#current-icon");
   currentIcon.setAttribute(
     "src",
-    "https://openweathermap.org/img/wn/" +
-      response.data.weather[0].icon +
-      "@2x.png"
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   currentIcon.setAttribute("alt", response.data.weather[0].description);
 }
